@@ -8,8 +8,7 @@ export async function POST(req: NextRequest) {
   const channel = form.get('channel_id') as string;
 
   // 任意のメッセージ内容（例として「クリアしました」）
-  //const message = `\`clear\`` + '\n'.repeat(250) +`\`clear done\``;
-  const message = '\n'.repeat(250);
+  const message = `\`clear\`` + '\n'.repeat(250) +`\`clear done\``;
 
   // Slack Botのトークンを環境変数から取得
   const SLACK_BOT_TOKEN = process.env.SLACK_BOT_TOKEN;
